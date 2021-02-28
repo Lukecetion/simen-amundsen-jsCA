@@ -17,7 +17,7 @@ async function getFilms(url) {
 
     const response = await fetch(url);
     const jsonResults = await response.json();
-    console.log(jsonResults);
+
 
     jsonResults.forEach(function (value) { document.querySelector('main').innerHTML += `  
 
@@ -32,7 +32,9 @@ async function getFilms(url) {
         </div>
     </div>
 `;})
-    } catch {}
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 getFilms(getGhibliFilms);
