@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Mirza:wght@400;500;600;700&family=Work+Sans:wght@300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: black;
+    font-family: 'Fira Mono', monospace;
+    background: salmon;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: center;
+}
+
+.form_div {
+	background-color: #ececec;
+	padding: 20px;
+	width: 300px;
+}
+
+input[type='text'] {
+	width: 100%;
+	height: 30px;
+	border: solid 1px black;
+	outline: none;
+}
+
+label {
+	margin-top: 10px;
+	display: block;
+}
+
+p {
+	padding: 0px;
+	margin: 0px;
+}
+
+.error {
+	color: red;
+	display: none;
+}
+
+button {
+	margin-top: 30px;
+	background-color: lightgreen;
+	width: 100%;
+	padding: 10px;
+	border: none;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}

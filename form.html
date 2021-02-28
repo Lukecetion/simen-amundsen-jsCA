@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+    <div class="alert"></div>
+    <main>
+        <div class="form_div">
+            <form>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" />
+                <p class="error nameError">Please enter a name.</p>
+
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" id="subject" />
+                <p class="error subjectError">Subject has to be at least 10 characters long.</p>
+
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" />
+                <p class="error emailError">Please enter a valid email</p>
+
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address" />
+                <p class="error addressError">Address has to be at least 35 characters long.</p>
+
+                <button id="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    <script src="/js/form.js"></script>
+</body>
+</html>

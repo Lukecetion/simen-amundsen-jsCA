@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Mirza:wght@400;500;600;700&family=Work+Sans:wght@300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: 'Fira Mono', monospace;
+    background: salmon;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 50px auto;
+
+    .card {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 10px;
+        background: rgb(201, 94, 83);
+        margin: 15px;
+        padding: 30px;
+    }
+
+    .card:nth-child(odd) {
+        background: rgb(182, 84, 73);
+    }
+
+    .card:nth-child(even) {
+        background: rgb(245, 155, 145);
+    }
+}
