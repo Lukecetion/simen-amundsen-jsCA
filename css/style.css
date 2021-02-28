@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Mirza:wght@400;500;600;700&family=Work+Sans:wght@300;400;500&display=swap");
 * {
   padding: 0;
@@ -9,40 +10,152 @@
 body {
   color: white;
   font-family: 'Fira Mono', monospace;
-  background: salmon;
+  background: #2b2b2b;
 }
 
-main {
+::-webkit-scrollbar {
+  display: none;
+}
+
+#load {
+  margin: auto;
+}
+
+/* —————————————————————————————————————————————————————————————————————————— */
+/*                                 HERO BANNER                                */
+/* —————————————————————————————————————————————————————————————————————————— */
+.hero {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 80%;
-  margin: 50px auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3% 10% 3% 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.705))), url("/img/hero.jpg") center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.705)), url("/img/hero.jpg") center;
 }
 
-main .card {
+.hero .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-decoration: none;
+  padding: 20px;
+  min-width: 50%;
+  font-size: 35px;
+  color: black;
+  background: white;
+}
+
+.hero .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: white;
+  background: black;
+  width: 30%;
+  padding: 10px;
+}
+
+.hero .contact:hover {
+  background: orange;
+}
+
+/* ——————————————————————————— END OF HERO BANNER ——————————————————————————— */
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 90%;
+  margin: 50px auto;
+}
+
+main .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-radius: 10px;
-  background: #c95e53;
-  margin: 15px;
-  padding: 30px;
+  margin: 20px;
+  padding: 10px;
+  background: #242424;
+  border-radius: 5px;
 }
 
-main .card:nth-child(odd) {
-  background: #b65449;
+main .cards .cardContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-main .card:nth-child(even) {
-  background: #f59b91;
+main .cards .cardContent h1 {
+  text-align: center;
+  font-size: 26px;
+  color: black;
+  background: white;
+  border-radius: 5px 5px 0 0;
+  padding: 15px;
+}
+
+main .cards .cardContent section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+main .cards .cardContent section p:nth-child(odd) {
+  font-weight: bold;
+}
+
+main .cards .cardContent section:nth-child(even) {
+  background: #585858;
+}
+
+main .cards .cardContent section:nth-child(odd) {
+  background: #4b4b4b;
+}
+
+main .cards .cardContent a {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 20px;
+  background: orange;
+  border-radius: 0 0 5px 5px;
+}
+
+main .cards .cardContent a:hover {
+  background: #b17608;
+}
+
+main .hide {
+  display: none;
+}
+
+main .show {
+  display: block;
 }

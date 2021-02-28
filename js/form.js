@@ -1,22 +1,26 @@
 /* —————————————————————————————— DOM SELECTION ————————————————————————————— */
 
 const submit = document.querySelector('#submit');
-// All error messages
+
 const nameError = document.querySelector('.nameError');
 const subjectError = document.querySelector('.subjectError');
 const emailError = document.querySelector('.emailError');
 const addressError = document.querySelector('.addressError');
 
-// create an onclick event, pass the event into the function
+
 submit.onclick = function (event) {
-	// Prevent default because we dont want the
-	// Form to submit
 	event.preventDefault();
-	// All Textbox values
+
+	document.querySelector('#load').classList.add('show');
+
 	const name = document.querySelector('#name').value.trim();
 	const subject = document.querySelector('#subject').value.trim();
 	const email = document.querySelector('#email').value.trim();
-    const address = document.querySelector('#address').value.trim();
+	const address = document.querySelector('#address').value.trim();
+
+	setTimeout(function(){
+
+	document.querySelector('#load').classList.remove('show');
 
 	if (name.length >= 1) {
 		nameError.classList.add('hide');
@@ -49,18 +53,13 @@ submit.onclick = function (event) {
 		addressError.classList.add('show');
 		addressError.classList.remove('hide');
 	}
-};
 
-function validateEmail(emailAddy) {
+	}, 2000);
+
+	function validateEmail(emailAddy) {
 	const emailExpression = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 	const isEmailValid = emailExpression.test(emailAddy);
 	return isEmailValid;
-}
+ }
 
-function testLen(elm, len) {
-	if (elm.length > len) {
-		return true;
-	} else {
-		return false;
-	}
 }

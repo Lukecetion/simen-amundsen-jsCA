@@ -6,38 +6,88 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+	display: none;
+  }
+
 body {
-    color: black;
+    color: white;
     font-family: 'Fira Mono', monospace;
-    background: salmon;
+    background: rgb(43, 43, 43);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    padding: 3% 10% 3% 10%;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.705)), url('/img/hero.jpg') center ;
+
+    .title {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        padding: 20px;
+        min-width: 50%;
+        font-size: 35px;
+        color: black;
+        background: white;
+    }
+
+    .contact {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        color: white;
+        background: black;
+        width: 30%;
+        padding: 10px;
+
+        &:hover {
+            background: orange;
+        }
+    }
+
 }
 
 main {
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	justify-content: center;
+    display: flex;
 }
 
-.form_div {
-	background-color: #ececec;
-	padding: 20px;
-	width: 300px;
+.formDiv {
+	display: flex;
+	flex-direction: column;
+
+	min-height: 100px;
+	margin: 50px auto;
+    background: #242424;
+    border-radius: 5px;
+    padding: 50px;
+	width: 30%;
+
+	#load {
+		margin: 50px auto 0 auto;
+		height: auto;
+		width: 100px;
+	}
 }
 
 input[type='text'] {
 	width: 100%;
-	height: 30px;
+	min-height: 40px;
+	border-radius: 5px;
 	border: solid 1px black;
 	outline: none;
+	padding: 10px;
 }
 
 label {
-	margin-top: 10px;
+	margin: 20px auto;
 	display: block;
 }
 
 p {
+
 	padding: 0px;
 	margin: 0px;
 }
@@ -48,11 +98,16 @@ p {
 }
 
 button {
+	font-family: 'Fira Mono';
 	margin-top: 30px;
-	background-color: lightgreen;
+	background-color: orange;
 	width: 100%;
 	padding: 10px;
 	border: none;
+
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 .hide {

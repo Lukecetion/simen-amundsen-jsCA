@@ -6,33 +6,100 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    display: none;
+  }
+
 body {
     color: white;
     font-family: 'Fira Mono', monospace;
-    background: salmon;
+    background: rgb(43, 43, 43);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    padding: 3% 10% 3% 10%;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.705)), url('/img/hero.jpg') center ;
+
+    .title {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        padding: 20px;
+        min-width: 50%;
+        font-size: 35px;
+        color: black;
+        background: white;
+    }
+
+    .contact {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        color: white;
+        background: black;
+        width: 30%;
+        padding: 10px;
+
+        &:hover {
+            background: orange;
+        }
+    }
+
 }
 
 main {
     display: flex;
-    flex-wrap: wrap;
-    width: 80%;
+}
+
+.card {
     margin: 50px auto;
+    border-radius: 5px;
+    padding: 50px;
+    min-height: 100px;
+    max-width: 30%;
+    background: rgb(36, 36, 36);
 
-    .card {
+    .cardContent {
         display: flex;
-        justify-content: center;
         flex-direction: column;
-        border-radius: 10px;
-        background: rgb(201, 94, 83);
-        margin: 15px;
-        padding: 30px;
+
+        p {
+            line-height: 25px;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            font-size: 14px;
+            padding: 10px 20px;
+
+            p:nth-child(odd) { 
+                font-weight: bold;
+            }
+        }
+
+        section:nth-child(even) {
+            background: rgb(88, 88, 88);
+        }
+
+        section:nth-child(odd) {
+            background: rgb(75, 75, 75);
+        }
     }
 
-    .card:nth-child(odd) {
-        background: rgb(182, 84, 73);
+    h1 {
+        text-align: center;
+        color: black;
+        background: white;
+        padding: 20px 0;
     }
 
-    .card:nth-child(even) {
-        background: rgb(245, 155, 145);
+    .desc {
+        padding: 0 20px;
+        margin: 30px 0;
     }
 }

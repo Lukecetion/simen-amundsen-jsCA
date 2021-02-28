@@ -12,10 +12,17 @@ async function getFilmsPage(filmId) {
 
         document.title = jsonResults.title;
         document.querySelector('main').innerHTML = `
-        
-        <h1>${jsonResults.title}</h1>
-        <h2> ${jsonResults.director} </h2>
-        <p> ${jsonResults.producer} </p>
+        <div class="card">
+            <div class="cardItems">
+                <div class="cardContent">
+                    <h1>${jsonResults.title}</h1>
+                    <p class="desc">${jsonResults.description}</p>
+                    <section><p>Directed by: </p> <p>${jsonResults.director}</p></section>
+                    <section><p>Produced by: </p> <p>${jsonResults.producer}</p></section>
+                    <section><p>Released in: </p> <p>${jsonResults.release_date}</p></section>
+                </div>
+            </div>
+        </div>
         `
     } catch {} finally {}
 }

@@ -8,9 +8,15 @@
     <link rel="stylesheet" href="/css/form.css">
 </head>
 <body>
-    <div class="alert"></div>
+
+    <section class="hero">
+        <a href="index.html" class="title"><h1>Studio Ghibli Movies</h1></a>
+        <a href="form.html"  class="contact"><p>Contact Us</p></a>
+    </section>
+
+    <div class="alerts"></div>
     <main>
-        <div class="form_div">
+        <div class="formDiv">
             <form>
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" />
@@ -29,6 +35,8 @@
                 <p class="error addressError">Address has to be at least 35 characters long.</p>
 
                 <button id="submit">Submit</button>
+
+                <img class="hide" id="load" src="/img/loadingdark.gif" alt="loading...">
             </form>
         </div>
     </main>

@@ -6,39 +6,104 @@
           box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
-  color: black;
+  color: white;
   font-family: 'Fira Mono', monospace;
-  background: salmon;
+  background: #2b2b2b;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3% 10% 3% 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.705))), url("/img/hero.jpg") center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.705)), url("/img/hero.jpg") center;
+}
+
+.hero .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  padding: 20px;
+  min-width: 50%;
+  font-size: 35px;
+  color: black;
+  background: white;
+}
+
+.hero .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: white;
+  background: black;
+  width: 30%;
+  padding: 10px;
+}
+
+.hero .contact:hover {
+  background: orange;
 }
 
 main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-.form_div {
-  background-color: #ececec;
-  padding: 20px;
-  width: 300px;
+.formDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100px;
+  margin: 50px auto;
+  background: #242424;
+  border-radius: 5px;
+  padding: 50px;
+  width: 30%;
+}
+
+.formDiv #load {
+  margin: 50px auto 0 auto;
+  height: auto;
+  width: 100px;
 }
 
 input[type='text'] {
   width: 100%;
-  height: 30px;
+  min-height: 40px;
+  border-radius: 5px;
   border: solid 1px black;
   outline: none;
+  padding: 10px;
 }
 
 label {
-  margin-top: 10px;
+  margin: 20px auto;
   display: block;
 }
 
@@ -53,11 +118,16 @@ p {
 }
 
 button {
+  font-family: 'Fira Mono';
   margin-top: 30px;
-  background-color: lightgreen;
+  background-color: orange;
   width: 100%;
   padding: 10px;
   border: none;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .hide {

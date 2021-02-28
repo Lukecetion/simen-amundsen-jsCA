@@ -6,43 +6,123 @@
           box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   color: white;
   font-family: 'Fira Mono', monospace;
-  background: salmon;
+  background: #2b2b2b;
 }
 
-main {
+.hero {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 80%;
-  margin: 50px auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3% 10% 3% 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.705))), url("/img/hero.jpg") center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.705)), url("/img/hero.jpg") center;
 }
 
-main .card {
+.hero .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-decoration: none;
+  padding: 20px;
+  min-width: 50%;
+  font-size: 35px;
+  color: black;
+  background: white;
+}
+
+.hero .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: white;
+  background: black;
+  width: 30%;
+  padding: 10px;
+}
+
+.hero .contact:hover {
+  background: orange;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card {
+  margin: 50px auto;
+  border-radius: 5px;
+  padding: 50px;
+  min-height: 100px;
+  max-width: 30%;
+  background: #242424;
+}
+
+.card .cardContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-radius: 10px;
-  background: #c95e53;
-  margin: 15px;
-  padding: 30px;
 }
 
-main .card:nth-child(odd) {
-  background: #b65449;
+.card .cardContent p {
+  line-height: 25px;
 }
 
-main .card:nth-child(even) {
-  background: #f59b91;
+.card .cardContent section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+.card .cardContent section p:nth-child(odd) {
+  font-weight: bold;
+}
+
+.card .cardContent section:nth-child(even) {
+  background: #585858;
+}
+
+.card .cardContent section:nth-child(odd) {
+  background: #4b4b4b;
+}
+
+.card h1 {
+  text-align: center;
+  color: black;
+  background: white;
+  padding: 20px 0;
+}
+
+.card .desc {
+  padding: 0 20px;
+  margin: 30px 0;
 }
