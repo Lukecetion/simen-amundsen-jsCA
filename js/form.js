@@ -54,7 +54,19 @@ submit.onclick = function (event) {
 		addressError.classList.remove('hide');
 	}
 
+	if (
+		name.length >= 5 && 
+		subject.length >= 10 &&
+		address.length >= 35 &&
+		validateEmail(email)) { 
+
+			document.querySelector('#correct').classList.remove('hide');
+
+			}
+
 	}, 2000);
+
+
 
 	function validateEmail(emailAddy) {
 	const emailExpression = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;

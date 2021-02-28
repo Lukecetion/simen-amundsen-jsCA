@@ -52,6 +52,18 @@ body {
 
 main {
     display: flex;
+	flex-direction: column;
+}
+
+#correct {
+	text-align: center;
+	border-radius: 5px;
+	padding: 30px;
+	background: lightgreen;
+	font-size: 16px;
+	color: rgb(5, 146, 68);
+	width: 30%;
+	margin: auto;
 }
 
 .formDiv {
@@ -93,7 +105,7 @@ p {
 }
 
 .error {
-	color: red;
+	color: salmon;
 	display: none;
 }
 
